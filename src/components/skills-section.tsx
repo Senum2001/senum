@@ -1,6 +1,8 @@
+// src/components/skills-section.tsx
 'use client';
 
-import { SkillIcon } from '@/components/skill-icon';
+import React from 'react';
+
 import { skillsData } from '@/lib/data';
 
 export function SkillsSection() {
@@ -11,11 +13,9 @@ export function SkillsSection() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
           {skillsData.map((skill, index) => (
             <div key={index} className="flex flex-col items-center space-y-2">
-              <SkillIcon
-                src={skill.icon}
-                alt={skill.label}
-                className="size-12 transition-transform duration-200 hover:scale-110"
-              />
+              <div className="size-12 transition-transform duration-200 hover:scale-110">
+                {skill.icon}
+              </div>
               <span className="text-center text-sm font-medium">
                 {skill.label}
               </span>
