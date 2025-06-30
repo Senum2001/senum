@@ -7,7 +7,7 @@ export const Footer = () => {
       <Button variant="link" className="text-muted-foreground p-0 font-medium">
         <a href="https://github.com/Senum2001">Senum</a>
       </Button>
-      . All rights reserved.
+      
     </footer>
   );
 };
