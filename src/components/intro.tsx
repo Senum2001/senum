@@ -55,9 +55,10 @@ export const Intro = () => {
         transition={{ delay: 0.1 }}
         className="text-muted-foreground max-w-xl"
       >
-        Based in Kalutara, Sri Lanka. I build scalable AI & ML solutions in Python,
-        TensorFlow, PySpark, and cloud platforms (Azure, AWS). Passionate about
-        Generative AI, Computer Vision, TinyML, and IoT innovations.
+        Based in Kalutara, Sri Lanka. I build scalable AI & ML solutions in
+        Python, TensorFlow, PySpark, and cloud platforms (Azure, AWS).
+        Passionate about Generative AI, Computer Vision, TinyML, and IoT
+        innovations.
       </motion.p>
 
       {/* Call-to-action buttons */}

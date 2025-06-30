@@ -1,44 +1,52 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { SectionHeading } from "@/components/section-heading";
-import { useSectionInView } from "@/hooks/use-section-in-view";
-import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
+import { motion } from 'framer-motion';
+
+import { Icons } from '@/components/icons';
+import { SectionHeading } from '@/components/section-heading';
+import { useSectionInView } from '@/hooks/use-section-in-view';
+import { cn } from '@/lib/utils';
 
 const educationData = [
   {
-    institution: "University of Moratuwa",
-    location: "Moratuwa, Sri Lanka",
-    degree: "B.Sc. in Electronic and Telecommunication Engineering",
-    cgpa: "3.62/4.00",
-    period: "Feb 2022 – Present",
+    institution: 'University of Moratuwa',
+    location: 'Moratuwa, Sri Lanka',
+    degree: 'B.Sc. in Electronic and Telecommunication Engineering',
+    cgpa: '3.62/4.00',
+    period: 'Feb 2022 – Present',
     description: [],
   },
   {
-    institution: "C.W.W. Kannangara Central College",
-    location: "Mathugama, Sri Lanka",
-    degree: "Advanced Level - Physical Science (3As), Ordinary Level (9As)",
-    zScore: "2.1001",
-    period: "2007 – 2020",
+    institution: 'C.W.W. Kannangara Central College',
+    location: 'Mathugama, Sri Lanka',
+    degree: 'Advanced Level - Physical Science (3As), Ordinary Level (9As)',
+    zScore: '2.1001',
+    period: '2007 – 2020',
     description: [],
   },
   {
-    institution: "ESOFT Metro Campus",
-    location: "Kalutara, Sri Lanka",
-    degree: "Diploma in English, Diploma in Information Technology",
-    achievements: "Dual Medalist",
-    period: "2021",
+    institution: 'ESOFT Metro Campus',
+    location: 'Kalutara, Sri Lanka',
+    degree: 'Diploma in English, Diploma in Information Technology',
+    achievements: 'Dual Medalist',
+    period: '2021',
     description: [],
   },
 ];
 
 export function Education() {
-  const { ref: sectionRef } = useSectionInView("Education");
+  const { ref: sectionRef } = useSectionInView('Education');
 
   return (
-    <section ref={sectionRef} id="education" className="my-10 scroll-mt-28 md:mb-20">
-      <SectionHeading heading="Education" content="My academic background and achievements." />
+    <section
+      ref={sectionRef}
+      id="education"
+      className="my-10 scroll-mt-28 md:mb-20"
+    >
+      <SectionHeading
+        heading="Education"
+        content="My academic background and achievements."
+      />
       <div className="relative max-w-screen-md">
         {educationData.map(
           (
@@ -54,7 +62,10 @@ export function Education() {
             },
             index
           ) => (
-            <div key={institution} className="relative pl-8 [&:not(:last-child)]:pb-10">
+            <div
+              key={institution}
+              className="relative pl-8 [&:not(:last-child)]:pb-10"
+            >
               <div className="bg-muted absolute left-0 top-2.5 h-full w-[2px] first:top-6 first:h-[calc(100%-24px)]">
                 <div className="border-primary bg-background absolute left-[-5px] top-0 size-3 rounded-full border-2" />
               </div>
@@ -63,7 +74,7 @@ export function Education() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.175 * index }}
                 viewport={{ once: true }}
-                className={cn("space-y-3 opacity-0")}
+                className={cn('space-y-3 opacity-0')}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex size-9 shrink-0 items-center justify-center rounded-full border">
@@ -83,7 +94,7 @@ export function Education() {
                   </div>
                 </div>
                 {description && description.length > 0 && (
-                  <ul className="list-disc pl-5 text-muted-foreground">
+                  <ul className="text-muted-foreground list-disc pl-5">
                     {description.map((line, idx) => (
                       <li key={idx}>{line}</li>
                     ))}

@@ -30,7 +30,7 @@ export const Projects = () => {
           content="Projects I worked on. Each of them containing its own case study."
         />
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-h-[600px] overflow-y-auto">
+      <div className="grid max-h-[600px] grid-cols-1 gap-7 overflow-y-auto md:grid-cols-2">
         {projectsData.map((project, index) => (
           <Project key={project.title} project={project} index={index} />
         ))}

@@ -17,23 +17,32 @@ const experiencesData = [
     description: [
       'Designed and implemented a custom model drift detection framework, capable of detecting concept drift in large-scale data environments.',
       'Collaborated cross-functionally to deliver project milestones on time, honing strong project management skills.',
-      'Developed a document and signature classification system for the GenAI project at Union Assurance.'
+      'Developed a document and signature classification system for the GenAI project at Union Assurance.',
     ],
     technologies: [
-      'Python', 'PySpark', 'TensorFlow', 'Keras', 'Evidently AI', 'Azure ML'
-    ]
+      'Python',
+      'PySpark',
+      'TensorFlow',
+      'Keras',
+      'Evidently AI',
+      'Azure ML',
+    ],
   },
   {
     company: 'WIWIS.AI',
     title: 'AI Engineer (Contract, Part-time)',
     period: 'Nov 2024 – Present',
     description: [
-      'Designed and deployed a computer vision–based passenger bus management system on an Orange Pi 5 Pro, enabling passenger tracking, real-time monitoring, and route optimization.'
+      'Designed and deployed a computer vision–based passenger bus management system on an Orange Pi 5 Pro, enabling passenger tracking, real-time monitoring, and route optimization.',
     ],
     technologies: [
-      'Python', 'OpenCV', 'Computer Vision', 'Orange Pi 5 Pro', 'TensorFlow'
-    ]
-  }
+      'Python',
+      'OpenCV',
+      'Computer Vision',
+      'Orange Pi 5 Pro',
+      'TensorFlow',
+    ],
+  },
 ];
 
 export const Experience = () => {
@@ -79,7 +88,7 @@ export const Experience = () => {
                     <span>{period}</span>
                   </div>
                 </div>
-                <ul className="list-disc pl-5 text-muted-foreground">
+                <ul className="text-muted-foreground list-disc pl-5">
                   {description.map((line, idx) => (
                     <li key={idx}>{line}</li>
                   ))}

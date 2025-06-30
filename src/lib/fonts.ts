@@ -1,4 +1,4 @@
-import { Inter, Fira_Code, Plus_Jakarta_Sans } from 'next/font/google';
+import { Fira_Code, Inter, Plus_Jakarta_Sans } from 'next/font/google';
 
 const fontSans = Inter({
   subsets: ['latin'],
